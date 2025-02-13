@@ -395,17 +395,14 @@ cards</code></pre>
 write an R statement that will add 1 to each element of the first vector
 in Newlist.</p>
 <pre class="r"><code>Newlist &lt;- list(a=1:10, b=&quot;Good morning&quot;, c=&quot;Hi&quot;)
-Newlist$a + 1</code></pre>
-<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11</code></pre>
+Newlist$a &lt;- Newlist$a + 1</code></pre>
 <p>If <code>b &lt;- list(a=1:10, c=&quot;Hello&quot;, d=&quot;AA&quot;)</code>, write an R
 expression that will give all elements of the first vector of b, except
 the second, and write another that returns only elements of
 <code>a</code> that are greater than 7.</p>
 <pre class="r"><code>b &lt;- list(a=1:10, c=&quot;Hello&quot;, d=&quot;AA&quot;)
-b$a[-2]</code></pre>
-<pre><code>## [1]  1  3  4  5  6  7  8  9 10</code></pre>
-<pre class="r"><code>b$a[b$a &gt; 7]</code></pre>
-<pre><code>## [1]  8  9 10</code></pre>
+b$a &lt;- b$a[-2]
+b$a &lt;- b$a[b$a &gt; 7]</code></pre>
 <p>Let <code>x &lt;- list(a=5:10, c=&quot;Hello&quot;, d=&quot;AA&quot;)</code>, write an R
 statement to add a new item z = “NewItem” to the list x.</p>
 <pre class="r"><code>x &lt;- list(a=5:10, c=&quot;Hello&quot;, d=&quot;AA&quot;)
