@@ -2,7 +2,7 @@
 title: "Lists - In Class Exercises"
 author: "Dr. Shoemaker"
 date: "DATA 2401"
-output:nhtml_document
+output: html_document
 
 ---
 
@@ -11,16 +11,24 @@ output:nhtml_document
 Make a list that contains the information on a single playing card. Suit, face, and value. 
 
 ```{r}
-
-
+playing_card <- list(
+  suit = c("Heart"),
+  face = c("Queen"),
+  value = c(10)
+)
+playing_card
 ```
 
 
 Make a second list where each element contains all the options for suit, face, and value, respectively. 
 
 ```{r}
-
-
+cards <- list(
+  suit = c("Heart", "Diamond", "Club", "Spade"),
+  face = c(2:10, "Ace", "King", "Queen", "Jack"),
+  value = c(2:10, 1, 10, 10, 10)
+)
+cards
 ```
 
 
@@ -28,22 +36,22 @@ If `Newlist <- list(a=1:10, b="Good morning", c="Hi")`, write an R statement tha
 
 ```{r}
 Newlist <- list(a=1:10, b="Good morning", c="Hi")
-
-
+Newlist$a + 1
 ```
 
 If `b <- list(a=1:10, c="Hello", d="AA")`, write an R expression that will give all elements of the first vector of b, except the second, and write another that returns only elements of `a` that are greater than 7.
 
 ```{r}
 b <- list(a=1:10, c="Hello", d="AA")
-
-
+b$a[-2]
+b$a[b$a > 7]
 ```
 
 Let `x <- list(a=5:10, c="Hello", d="AA")`, write an R statement to add a new item z = "NewItem" to the list x.
 
 ```{r}
 x <- list(a=5:10, c="Hello", d="AA")
-
-
+x$z <- c("NewItem")
+x$z
+str(x)
 ```
